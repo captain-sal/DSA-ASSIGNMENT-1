@@ -1,0 +1,31 @@
+bool helper(Node* head, Node* tail){
+	if(head->data!=tail->data){
+		return false;
+	}
+	if(head==tail || head->next==tail){
+		return true;
+	}
+
+Node*temp=head;
+while(temp->next!=tail){
+	temp=temp->next;
+}
+return helper(head->next, temp);
+}
+
+bool isPalindrome(Node *head)
+{
+  if(head==NULL){
+	  return true;
+  }
+  else if(head->next==NULL){
+	  return true;
+  }
+
+  Node*tail=head;
+  while(tail->next!=NULL){
+	  tail=tail->next;
+  }
+  return helper(head,tail);
+        }
+		
