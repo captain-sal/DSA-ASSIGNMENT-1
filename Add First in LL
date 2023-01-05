@@ -1,0 +1,12 @@
+void addfirst(Node*head, int val){
+   if(head==NULL){
+       Node*n=new node(val);
+       n=head;
+       }
+   else{
+      Node*n=new node(val);
+      head=head->next;
+      n=head;
+      }
+     return head;
+     }
