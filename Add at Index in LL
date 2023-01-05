@@ -1,0 +1,15 @@
+void addAtIndex(Node*head, int val, int in){
+    if(head==NULL){
+       return NULL;
+       }
+       Node*temp=head;
+    Node*n=new Node(val);
+    for(int i=0; i<in-1;i++){
+      temp=temp->next;
+      
+      }
+      n->next=temp->next;
+      temp->next=n;
+      return temp;
+      }
+      
