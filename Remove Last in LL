@@ -1,0 +1,13 @@
+Node*removeLast(Node*head){
+  if(head==NULL){
+       return NULL;
+       }
+  Node*temp=head;
+  Node*n=temp->next;
+  while(n!=NULL){
+        temp=n;
+       delete n;
+       }
+      return temp;
+      }
+       
