@@ -1,0 +1,13 @@
+Node*middle(Node*head){
+    Node*temp=head;
+    if(temp==NULL)
+       return temp;
+       
+    Node*slow=temp;
+    Node*fast=temp->next;
+    while(fast!=NULL && fast->next!=NULL){
+        slow=slow->next;
+        fast=fast->next->next;
+        }
+        return slow;
+        }
