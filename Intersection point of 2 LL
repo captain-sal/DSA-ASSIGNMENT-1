@@ -1,0 +1,37 @@
+Approach
+
+Create a function with heads of 2 LL
+Find the length of both LL
+Absolute difference of lengths
+if LL1 size> LL2 size
+    run till LL2 size
+    
+else
+   LL1 size
+   
+ 
+ 
+ int commonPoint(listnode * headA, listnode * headB) {
+   int len1 = count(headA);
+   int len2 = count(headB);
+   listnode * p1 = headA;
+   listnode * p2 = headB;
+   if (len1 > len2) {
+      for (int i = 0; i < len1 - len2; ++i) {
+         p1 = p1 -> next;
+      }
+   }
+   if (len1 < len2) {
+      for (int i = 0; i < len2 - len1; ++i) {
+         p2 = p2 -> next;
+      }
+   }
+   while (p1 != NULL and p2 != NULL) {
+      if (p1 == p2) {
+         return p1 -> data;
+      }
+      p1 = p1 -> next;
+      p2 = p2 -> next;
+   }
+   return -1;
+}
