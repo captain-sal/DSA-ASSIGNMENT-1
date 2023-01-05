@@ -1,0 +1,21 @@
+node*fleft;
+void foldhelper(node*right, int count){
+    if(right==NULL){
+        return;
+        }
+   foldhelper(right->next,count+1);
+   if(count>size/2){
+         node*temp=fleft->next;
+         fleft->next=right;
+         right->next=temp;
+         fleft=temp;
+         }
+     else if(count==size/2){
+        tail=right;
+        right->next=NULL;
+        }
+        }
+        void fold(){
+        fleft=head;
+        foldhelper(head,0);
+        }
